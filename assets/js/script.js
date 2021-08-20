@@ -1,210 +1,371 @@
 var today = moment().format('dddd, MMMM Do, YYYY');
 $('#currentDay').text(today);
 
-var button7 = document.querySelector('.button7');
-var taskInput7 = document.querySelector('.task7');
+var button7 = $('.button7');
+var taskInput7 = $('.task7');
 
-button7.addEventListener('click', function() {
+button7.on('click', function() {
 
-    var task7 = taskInput7.value;
+    var task7 = taskInput7.val();
     localStorage.setItem('7AM', task7);
-    taskInput7.setAttribute('value', task7);
 })
 
 if (localStorage.getItem('7AM')) {
 
     var savedTask7 = localStorage.getItem('7AM');
-    taskInput7.setAttribute('placeholder', savedTask7);
+    taskInput7.val(savedTask7);
 }
 
-var button8 = document.querySelector('.button8');
-var taskInput8 = document.querySelector('.task8');
+if (moment().format("H") < 7) {
 
-button8.addEventListener('click', function() {
+    taskInput7.addClass('future');
+    console.log(taskInput7);
 
-    var task8 = taskInput8.value;
+} else if (moment().format("H") > 7) {
+
+    taskInput7.addClass('past');
+    console.log(taskInput7);
+
+} else {
+
+    taskInput7.addClass('present');
+}
+
+var button8 = $('.button8');
+var taskInput8 = $('.task8');
+
+button8.on('click', function() {
+
+    var task8 = taskInput8.val();
     localStorage.setItem('8AM', task8);
-    taskInput8.setAttribute('value', task8);
 })
 
 if (localStorage.getItem('8AM')) {
 
     var savedTask8 = localStorage.getItem('8AM');
-    taskInput8.setAttribute('placeholder', savedTask8);
+    taskInput8.val(savedTask8);
 }
 
-var button9 = document.querySelector('.button9');
-var taskInput9 = document.querySelector('.task9');
+if (moment().format("H") < 8) {
 
-button9.addEventListener('click', function() {
+    taskInput8.addClass('future');
+    console.log(taskInput8);
 
-    var task9 = taskInput9.value;
+} else if (moment().format("H") > 8) {
+
+    taskInput8.addClass('past');
+    console.log(taskInput8);
+
+} else {
+
+    taskInput8.addClass('present');
+}
+
+var button9 = $('.button9');
+var taskInput9 = $('.task9');
+
+button9.on('click', function() {
+
+    var task9 = taskInput9.val();
     localStorage.setItem('9AM', task9);
-    taskInput9.setAttribute('value', task9);
 })
 
 if (localStorage.getItem('9AM')) {
 
     var savedTask9 = localStorage.getItem('9AM');
-    taskInput9.setAttribute('placeholder', savedTask9);
+    taskInput9.val(savedTask9);
 }
 
-var button10 = document.querySelector('.button10');
-var taskInput10 = document.querySelector('.task10');
+if (moment().format("H") < 9) {
 
-button10.addEventListener('click', function() {
+    taskInput9.addClass('future');
 
-    var task10 = taskInput10.value;
+} else if (moment().format("H") > 9) {
+
+    taskInput9.addClass('past');
+
+} else {
+
+    taskInput9.addClass('present');
+}
+
+var button10 = $('.button10');
+var taskInput10 = $('.task10');
+
+button10.on('click', function() {
+
+    var task10 = taskInput10.val();
     localStorage.setItem('10AM', task10);
-    taskInput10.setAttribute('value', task10);
+    // taskInput10.attr('value', task10);
 })
 
 if (localStorage.getItem('10AM')) {
 
     var savedTask10 = localStorage.getItem('10AM');
-    taskInput10.setAttribute('placeholder', savedTask10);
+    taskInput10.val(savedTask10);
 }
 
-var button11 = document.querySelector('.button11');
-var taskInput11 = document.querySelector('.task11');
+if (moment().format("H") < 10) {
 
-button11.addEventListener('click', function() {
+    taskInput10.addClass('future');
 
-    var task11 = taskInput11.value;
+} else if (moment().format("H") > 10) {
+
+    taskInput10.addClass('past');
+
+} else {
+
+    taskInput10.addClass('present');
+}
+
+var button11 = $('.button11');
+var taskInput11 = $('.task11');
+
+button11.on('click', function() {
+
+    var task11 = taskInput11.val();
     localStorage.setItem('11AM', task11);
-    taskInput11.setAttribute('value', task11);
 })
 
 if (localStorage.getItem('11AM')) {
 
     var savedTask11 = localStorage.getItem('11AM');
-    taskInput11.setAttribute('placeholder', savedTask11);
+    taskInput11.val(savedTask11);
 }
 
-var button12 = document.querySelector('.button12');
-var taskInput12 = document.querySelector('.task12');
+if (moment().format("H") < 11) {
 
-button12.addEventListener('click', function() {
+    taskInput11.addClass('future');
+
+} else if (moment().format("H") > 11) {
+
+    taskInput11.addClass('past');
+
+} else {
+
+    taskInput11.addClass('present');
+}
+
+var button12 = $('.button12');
+var taskInput12 = $('.task12');
+
+button12.on('click', function() {
 
     var task12 = taskInput12.value;
     localStorage.setItem('12PM', task12);
-    taskInput12.setAttribute('value', task12);
 })
 
 if (localStorage.getItem('12PM')) {
 
     var savedTask12 = localStorage.getItem('12PM');
-    taskInput12.setAttribute('placeholder', savedTask12);
+    taskInput12.val(savedTask12);
 }
 
-var button13 = document.querySelector('.button13');
-var taskInput13 = document.querySelector('.task13');
+if (moment().format("H") < 12) {
 
-button13.addEventListener('click', function() {
+    taskInput12.addClass('future');
+
+} else if (moment().format("H") > 12) {
+
+    taskInput12.addClass('past');
+
+} else {
+
+    taskInput12.addClass('present');
+}
+
+var button13 = $('.button13');
+var taskInput13 = $('.task13');
+
+button13.on('click', function() {
 
     var task13 = taskInput13.value;
     localStorage.setItem('1PM', task13);
-    taskInput13.setAttribute('value', task13);
 })
 
 if (localStorage.getItem('1PM')) {
 
     var savedTask13 = localStorage.getItem('1PM');
-    taskInput13.setAttribute('placeholder', savedTask13);
+    taskInput13.val(savedTask13);
 }
 
-var button14 = document.querySelector('.button14');
-var taskInput14 = document.querySelector('.task14');
+if (moment().format("H") < 13) {
 
-button14.addEventListener('click', function() {
+    taskInput13.addClass('future');
+
+} else if (moment().format("H") > 13) {
+
+    taskInput13.addClass('past');
+
+} else {
+
+    taskInput13.addClass('present');
+}
+
+var button14 = $('.button14');
+var taskInput14 = $('.task14');
+
+button14.on('click', function() {
 
     var task14 = taskInput14.value;
     localStorage.setItem('2PM', task14);
-    taskInput14.setAttribute('value', task14);
 })
 
 if (localStorage.getItem('2PM')) {
 
     var savedTask14 = localStorage.getItem('2PM');
-    taskInput14.setAttribute('placeholder', savedTask14);
+    taskInput14.val(savedTask14);
 }
 
-var button15 = document.querySelector('.button15');
-var taskInput15 = document.querySelector('.task15');
+if (moment().format("H") < 14) {
 
-button15.addEventListener('click', function() {
+    taskInput14.addClass('future');
+
+} else if (moment().format("H") > 14) {
+
+    taskInput14.addClass('past');
+
+} else {
+
+    taskInput14.addClass('present');
+}
+
+var button15 = $('.button15');
+var taskInput15 = $('.task15');
+
+button15.on('click', function() {
 
     var task15 = taskInput15.value;
     localStorage.setItem('3PM', task15);
-    taskInput15.setAttribute('value', task15);
 })
 
 if (localStorage.getItem('3PM')) {
 
     var savedTask15 = localStorage.getItem('3PM');
-    taskInput15.setAttribute('placeholder', savedTask15);
+    taskInput15.val(savedTask15);
 }
 
-var button16 = document.querySelector('.button16');
-var taskInput16 = document.querySelector('.task16');
+if (moment().format("H") < 15) {
 
-button16.addEventListener('click', function() {
+    taskInput15.addClass('future');
+
+} else if (moment().format("H") > 15) {
+
+    taskInput15.addClass('past');
+
+} else {
+
+    taskInput15.addClass('present');
+}
+
+var button16 = $('.button16');
+var taskInput16 = $('.task16');
+
+button16.on('click', function() {
 
     var task16 = taskInput16.value;
     localStorage.setItem('4PM', task16);
-    taskInput16.setAttribute('value', task16);
 })
 
 if (localStorage.getItem('4PM')) {
 
     var savedTask16 = localStorage.getItem('4PM');
-    taskInput16.setAttribute('placeholder', savedTask16);
+    taskInput16.val(savedTask16);
 }
 
-var button17 = document.querySelector('.button17');
-var taskInput17 = document.querySelector('.task17');
+if (moment().format("H") < 16) {
 
-button17.addEventListener('click', function() {
+    taskInput16.addClass('future');
+
+} else if (moment().format("H") > 16) {
+
+    taskInput16.addClass('past');
+
+} else {
+
+    taskInput16.addClass('present');
+}
+
+var button17 = $('.button17');
+var taskInput17 = $('.task17');
+
+button17.on('click', function() {
 
     var task17 = taskInput17.value;
     localStorage.setItem('5PM', task17);
-    taskInput17.setAttribute('value', task17);
 })
 
 if (localStorage.getItem('5PM')) {
 
     var savedTask17 = localStorage.getItem('5PM');
-    taskInput17.setAttribute('placeholder', savedTask17);
+    taskInput17.val(savedTask17);
 }
 
-var button18 = document.querySelector('.button18');
-var taskInput18 = document.querySelector('.task18');
+if (moment().format("H") < 17) {
 
-button18.addEventListener('click', function() {
+    taskInput17.addClass('future');
+
+} else if (moment().format("H") > 17) {
+
+    taskInput17.addClass('past');
+
+} else {
+
+    taskInput17.addClass('present');
+}
+
+var button18 = $('.button18');
+var taskInput18 = $('.task18');
+
+button18.on('click', function() {
 
     var task18 = taskInput18.value;
     localStorage.setItem('6PM', task18);
-    taskInput18.setAttribute('value', task18);
 })
 
 if (localStorage.getItem('6PM')) {
 
     var savedTask18 = localStorage.getItem('6PM');
-    taskInput18.setAttribute('placeholder', savedTask18);
+    taskInput18.val(savedTask18);
 }
 
-var button19 = document.querySelector('.button19');
-var taskInput19 = document.querySelector('.task19');
+if (moment().format("H") < 18) {
 
-button19.addEventListener('click', function() {
+    taskInput18.addClass('future');
+
+} else if (moment().format("H") > 18) {
+
+    taskInput18.addClass('past');
+
+} else {
+
+    taskInput18.addClass('present');
+}
+
+var button19 = $('.button19');
+var taskInput19 = $('.task19');
+
+button19.on('click', function() {
 
     var task19 = taskInput19.value;
     localStorage.setItem('7PM', task19);
-    taskInput19.setAttribute('value', task19);
 })
 
 if (localStorage.getItem('7PM')) {
 
     var savedTask19 = localStorage.getItem('7PM');
-    taskInput19.setAttribute('placeholder', savedTask19);
+    taskInput19.val(savedTask19);
+}
+
+if (moment().format("H") < 19) {
+
+    taskInput19.addClass('future');
+
+} else if (moment().format("H") > 19) {
+
+    taskInput19.addClass('past');
+
+} else {
+
+    taskInput19.addClass('present');
 }
